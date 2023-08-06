@@ -1,16 +1,26 @@
 "use client";
 
+import * as z from "zod";
 import { MessageSquare } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 import Heading from "@/components/heading";
+import { formSchema } from "@/app/(dashboard)/(routes)/conversation/constants";
 
 const ConversationPage = () => {
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       prompt: ""
     }
   });
+
+  const isLoading = form.formState.isSubmitting;
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+  };
   
   return (
     <div>

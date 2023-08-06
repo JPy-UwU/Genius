@@ -1,4 +1,3 @@
-import { Menu } from 'lucide-react';
 import { UserButton } from '@clerk/nextjs';
 
 import { Button } from '@/components/ui/button';

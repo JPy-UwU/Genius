@@ -75,10 +75,19 @@ const ImagePage = () => {
                       <Input
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                         disabled={isLoading}
-                        placeholder="How do I calculate the area of a octagon?"
+                        placeholder="A picture of a white fox sleeping in a snowy night"
                         {...field}
                       />
                     </FormControl>
+                  </FormItem>
+                )}
+              />
+              <FormField 
+                name= "amount"
+                control={form.control}
+                render={({ field }) => (
+                  <FormItem className="col-span-12 lg: col-span-2">
+
                   </FormItem>
                 )}
               />

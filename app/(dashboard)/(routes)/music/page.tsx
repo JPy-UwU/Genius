@@ -7,7 +7,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChatCompletionRequestMessage } from "openai";
 
 import Heading from "@/components/heading";
 import { Input } from "@/components/ui/input";
@@ -94,9 +93,11 @@ const MusicPage = () => {
           {!music && !isLoading && (
             <Empty label="No music started" />
           )}
-          <div>
-            Music here
-          </div>
+          {music && (
+            <audio controls className="w-full mt-8">
+              <source src={music} />
+            </audio>
+          )}
         </div>
       </div>
     </div>

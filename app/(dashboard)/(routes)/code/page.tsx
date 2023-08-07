@@ -19,7 +19,7 @@ import UserAvatar from "@/components/user-avatar";
 import BotAvatar from "@/components/bot-avatar";
 import { cn } from "@/lib/utils";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { formSchema } from "@/app/(dashboard)/(routes)/conversation/constants";
+import { formSchema } from "@/app/(dashboard)/(routes)/code/constants";
 
 const CodePage = () => {
   const router = useRouter();

@@ -6,13 +6,12 @@ import { Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-interface SubscriptionButtonProps {
-  isPro: boolean
-}
 
-const SubscriptionButton = ({
+export const SubscriptionButton = ({
   isPro = false
-}: SubscriptionButtonProps) => {
+}: {
+  isPro: boolean;
+}) => {
   const [loading, setLoading] = useState(false);
 
   const onClick = async () => {
@@ -35,5 +34,3 @@ const SubscriptionButton = ({
     </Button>
   )
 }
-
-export default SubscriptionButton;

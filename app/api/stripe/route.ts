@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-
 import { auth, currentUser } from "@clerk/nextjs";
+
 import prismadb from "@/lib/prismadb";
 import { absoluteUrl } from "@/lib/utils";
 import { stripe } from "@/lib/stripe";

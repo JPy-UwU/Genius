@@ -7,6 +7,7 @@ import { Montserrat } from "next/font/google";
 import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import FreeCounter from "@/components/free-counter";
 
 const monsterrat = Montserrat({ weight: "600", subsets: []  });
 
@@ -92,6 +93,9 @@ const Sidebar = ({
           ))}
         </div>
       </div>
+      <FreeCounter
+        apiLimitCount={apiLimitCount}
+      />
     </div>
   );
 }

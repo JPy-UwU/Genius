@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { Zap } from "lucide-react";
 
@@ -10,10 +8,12 @@ import { MAX_FREE_COUNTS } from "@/constants";
 import { useProModal } from "@/hooks/use-pro-modal";
 
 interface FreeCounterProps {
-  apiLimitCount: number;
+  isPro: boolean,
+  apiLimitCount: number,
 };
 
 const FreeCounter = ({
+  isPro = false,
   apiLimitCount = 0
 }: FreeCounterProps) => {
   const proModal = useProModal();
@@ -24,6 +24,10 @@ const FreeCounter = ({
   }, []);
 
   if (!mounted) {
+    return null;
+  }
+
+  if (isPro) {
     return null;
   }
 

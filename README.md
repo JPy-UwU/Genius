@@ -1,6 +1,6 @@
 # Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe
 
-![Genius App Landing Page](https://github.com/JPy-UwU/genius/blob/main/public/logo.png)
+![Genius App Landing Page](https://github.com/JPy-UwU/genius/blob/main/public/Genius_Landing_Page.png)
 
 
 

@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Check, Code, ImageIcon, MessageSquare, Music, VideoIcon, Zap } from "lucide-react";
+import toast from "react-hot-toast";
 
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useProModal } from "@/hooks/use-pro-modal";
@@ -55,7 +56,7 @@ const ProModal = () => {
 
       window.location.href = response.data.url;
     } catch (error) {
-      console.log("STRIPE_CLIENT_ERROR", error);
+      toast.error("Something went wrong.");
     } finally {
       setLoading(false);
     }
